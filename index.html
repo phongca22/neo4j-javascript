@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-route.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+    <script src="https://cdn.gitcdn.link/cdn/angular/bower-material/v1.1.5/angular-material.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.gitcdn.link/cdn/angular/bower-material/v1.1.5/angular-material.css" />
+    <script src="js/neo4j-web.min.js"></script>
+    <script src="js/app.js"></script>
+</head>
+<body>
+    <div ng-controller="AppCtrl as self" ng-app="MyApp"
+        layout="column" layout-fill
+        layout-align="center center">
+        <div class="md-whiteframe-2dp md-padding md-margin"
+            layout="column">
+            <div layout="row">
+                <md-input-container>
+                    <label>Name</label>
+                    <input ng-model="self.name"/>
+                </md-input-container>
+                <md-input-container>
+                    <label>Email</label>
+                    <input ng-model="self.email"/>
+                </md-input-container>
+                <md-input-container>
+                    <label>Reference Id</label>
+                    <input ng-model="self.referenceId"/>
+                </md-input-container>
+            </div>
+            <div layout="row" layout-align="space-between center">
+                <div>
+                    {{self.message}}
+                </div>
+                <md-button class="md-raised md-primary"
+                    ng-click="self.create()">Create</md-button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
